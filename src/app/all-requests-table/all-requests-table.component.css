@@ -1,0 +1,7 @@
+.bottom-bar {
+  background-color: yellow;
+  border-bottom: none;
+}
+.mat-mdc-cell {
+  border-bottom-color: #f3f3f3 !important;
+}

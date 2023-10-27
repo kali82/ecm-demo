@@ -1,0 +1,32 @@
+<!-- header.component.html -->
+<mat-toolbar color="#FFFFFF">
+  <button mat-icon-button class="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="title">Engineering Change Management</span>
+  <span class="spacer"></span>
+  <img src="../../assets/img/logo.PNG" alt="Logo" class="logo" />
+</mat-toolbar>
+<div class="headerTitlePage">
+  <span class="titlePage">Change request overview</span>
+</div>
+<div class="" style="margin: 10px">
+  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+    <mat-tab label="All requests (23)"
+      ><div class="table-container">
+        <app-all-requests-table></app-all-requests-table></div
+    ></mat-tab>
+    <mat-tab label="My CRs (2)"
+      ><div class="table-container">
+        <app-all-requests-table></app-all-requests-table></div
+    ></mat-tab>
+    <mat-tab label="Assigned (18)"
+      ><div class="table-container">
+        <app-all-requests-table></app-all-requests-table></div
+    ></mat-tab>
+    <mat-tab label="Draft (0)"
+      ><div class="table-container">
+        <app-all-requests-table></app-all-requests-table></div
+    ></mat-tab>
+  </mat-tab-group>
+</div>

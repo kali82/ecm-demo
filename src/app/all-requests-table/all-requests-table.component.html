@@ -1,0 +1,66 @@
+<mat-table #table [dataSource]="dataSource" matSort>
+  <!-- Kolumna "MCR ID" -->
+  <ng-container matColumnDef="mcrId">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>MCR ID</mat-header-cell>
+    <mat-cell
+      style="color: var(--ecm-green); font-weight: 450"
+      *matCellDef="let row"
+      >{{ row.mcrId }}</mat-cell
+    >
+  </ng-container>
+
+  <!-- Kolumna "Title" -->
+  <ng-container matColumnDef="title">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Title</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{ row.title }}</mat-cell>
+  </ng-container>
+  <!-- Kolumna "Product Description" -->
+  <ng-container matColumnDef="productDescription">
+    <mat-header-cell *matHeaderCellDef mat-sort-header
+      >Product Description</mat-header-cell
+    >
+    <mat-cell *matCellDef="let row">{{ row.productDescription }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="status">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{ row.status }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="createdBy">
+    <mat-header-cell *matHeaderCellDef mat-sort-header
+      >Created By</mat-header-cell
+    >
+    <mat-cell *matCellDef="let row">{{ row.createdBy }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="dateCreated">
+    <mat-header-cell *matHeaderCellDef mat-sort-header
+      >Date Created</mat-header-cell
+    >
+    <mat-cell *matCellDef="let row"
+      >{{ row.dateCreated | date:'dd/MM/yy'}}</mat-cell
+    >
+  </ng-container>
+  <ng-container matColumnDef="lastChangedBy">
+    <mat-header-cell *matHeaderCellDef mat-sort-header
+      >Last Changed By</mat-header-cell
+    >
+    <mat-cell *matCellDef="let row">{{ row.lastChangedBy }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="lastChangedOn">
+    <mat-header-cell *matHeaderCellDef mat-sort-header
+      >Last Changed On</mat-header-cell
+    >
+    <mat-cell *matCellDef="let row"
+      >{{ row.lastChangedOn | date:'dd/MM/yy'}}</mat-cell
+    >
+  </ng-container>
+  <!-- Pozostałe kolumny analogicznie -->
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+<mat-toolbar class="bottom-bar">
+  <button [routerLink]="'../form'" mat-raised-button color="accent">
+    <mat-icon>add</mat-icon>
+    <span>NEW CHANGE REQUEST</span>
+  </button>
+</mat-toolbar>

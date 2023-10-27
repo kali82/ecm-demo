@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+:root {
+  --ecm-green: #00893d;
+  --ecm-light-grey-text: #626262;
+  --ecm-black-text: #212121;
+  --ecm-stepper-dots: #dedede;
+}
+
+.mat-step-icon-state-edit {
+  background-color: green !important;
+}
+.mat-step-icon {
+  background-color: none;
+}
